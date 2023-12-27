@@ -34,16 +34,15 @@ const queryTimeout = ref(null)
 const searchResults = ref(null)
 const searchError = ref(null)
 
-const API_KEY = "889d20dfd8044353daf28cd4fd544a6d"
-console.log(import.meta.env.API_KEY)
-
 const getSearchResults = () => {
   clearTimeout(queryTimeout.value)
   queryTimeout.value = setTimeout(async () => {
     if (searchQuery.value !== "") {
       try {
         const result = await axios.get(
-          `http://api.openweathermap.org/geo/1.0/direct?q=${searchQuery.value}&limit=10&appid=${import.meta.env.VITE_API_KEY}`
+          `http://api.openweathermap.org/geo/1.0/direct?q=${
+            searchQuery.value
+          }&limit=10&appid=${import.meta.env.VITE_API_KEY}`
         )
         searchResults.value = result.data
       } catch {
