@@ -16,9 +16,10 @@
       >
         <li
           v-for="result in searchResults"
-          class="bg-weather-secondary p-2 rounded-md"
+          @click="previewCity(result)"
+          class="bg-weather-secondary p-2 rounded-md cursor-pointer"
         >
-          {{ result.country }}, {{ result.state }}, {{ result.name }}
+          {{ result.country }}, {{ result.name }}
         </li>
       </ul>
     </div>
@@ -28,6 +29,9 @@
 <script setup>
 import { ref } from "vue"
 import axios from "axios"
+import { useRouter } from "vue-router"
+
+const router = useRouter()
 
 const searchQuery = ref("")
 const queryTimeout = ref(null)
@@ -54,5 +58,14 @@ const getSearchResults = () => {
 
     searchResults.value = null
   }, 300)
+}
+
+const previewCity = (result) => {
+  console.log(result)
+  router.push({
+    name: "cityView",
+    params: { country: result.country, city: result.name },
+    query: { lon: result.lon, lat: result.lat },
+  })
 }
 </script>
