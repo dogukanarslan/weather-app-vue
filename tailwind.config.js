@@ -5,20 +5,20 @@ export default {
     extend: {
       colors: {
         "weather-primary": "#00668a",
-        "weather-secondary": "#004e71",
-      },
+        "weather-secondary": "#004e71"
+      }
     },
     fontFamily: {
-      Roboto: ["Roboto", "sans-serif"],
+      Roboto: ["Roboto", "sans-serif"]
     },
     container: {
       padding: "2rem",
-      center: true,
+      center: true
     },
     screens: {
       sm: "640px",
-      md: "768px",
-    },
+      md: "768px"
+    }
   },
-  plugins: [],
+  plugins: []
 }

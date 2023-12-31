@@ -75,8 +75,8 @@ const addCity = () => {
     city: route.params.city,
     coords: {
       lat: route.query.lat,
-      lon: route.query.lon,
-    },
+      lon: route.query.lon
+    }
   }
 
   savedCities.value.push(locationObj)

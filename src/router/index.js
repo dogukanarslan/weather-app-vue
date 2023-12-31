@@ -10,18 +10,18 @@ const router = createRouter({
       name: "home",
       component: HomeView,
       meta: {
-        title: "Home",
-      },
+        title: "Home"
+      }
     },
     {
       path: "/weather/:country/:city",
       name: "cityView",
       component: CityView,
       meta: {
-        title: "Weather",
-      },
-    },
-  ],
+        title: "Weather"
+      }
+    }
+  ]
 })
 
 router.beforeEach((to, from, next) => {
