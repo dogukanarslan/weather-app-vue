@@ -1,23 +1,23 @@
 <template>
   <main class="container text-white">
-    <div class="pt-4 mb-8 relative">
+    <div class="relative mb-8 pt-4">
       <input
         type="text"
         @input="getSearchResults"
         v-model="searchQuery"
         placeholder="Search for a city or state"
-        class="py-2 px-1 w-full bg-transparent border-b focus:border-weather-secondary focus:outline-none"
+        class="w-full border-b bg-transparent px-1 py-2 focus:border-weather-secondary focus:outline-none"
       />
       <p v-if="searchError">{{ searchError }}</p>
       <p v-if="!searchError && searchResults?.length === 0">No results found</p>
       <ul
         v-if="searchResults && searchResults.length !== 0"
-        class="absolute bg-weather-secondary text-white shadow-md py-2 px-1 w-full"
+        class="absolute w-full bg-weather-secondary px-1 py-2 text-white shadow-md"
       >
         <li
           v-for="result in searchResults"
           @click="previewCity(result)"
-          class="bg-weather-secondary p-2 rounded-md cursor-pointer"
+          class="cursor-pointer rounded-md bg-weather-secondary p-2"
         >
           {{ result.country }}, {{ result.name }}
         </li>

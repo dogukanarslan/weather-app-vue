@@ -3,14 +3,14 @@
     <Transition name="modal-outer">
       <div
         v-if="modalActive"
-        class="absolute w-full bg-black bg-opacity-30 h-screen top-0 left-0 flex justify-center px-8"
+        class="absolute left-0 top-0 flex h-screen w-full justify-center bg-black bg-opacity-30 px-8"
       >
         <Transition name="modal-inner">
-          <div class="p-4 bg-white self-start mt-32 max-w-screen-md">
+          <div class="mt-32 max-w-screen-md self-start bg-white p-4">
             <slot></slot>
             <button
               @click="$emit('close-modal')"
-              class="text-shite mt-8 bg-weather-primary py-2 px-6"
+              class="text-shite mt-8 bg-weather-primary px-6 py-2"
             >
               Close
             </button>

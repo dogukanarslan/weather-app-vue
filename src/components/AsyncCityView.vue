@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col flex-1 items-center">
+  <div class="flex flex-1 flex-col items-center">
     <div
-      class="text-white p-4 bg-weather-secondary w-full text-center"
+      class="w-full bg-weather-secondary p-4 text-center text-white"
       v-if="route.query.preview"
     >
       <p>
@@ -9,7 +9,7 @@
         tracking this city
       </p>
     </div>
-    <div class="text-white text-center">
+    <div class="text-center text-white">
       <p>{{ route.params.city }}</p>
       <div v-if="weatherData" class="space-y-4">
         <p class="text-8xl">{{ Math.round(weatherData.main.temp) }}&deg</p>
@@ -33,7 +33,7 @@
     </div>
 
     <div
-      class="flex items-center gap-2 py-12 text-white cursor-pointer duration-150 hover:text-red-500"
+      class="flex cursor-pointer items-center gap-2 py-12 text-white duration-150 hover:text-red-500"
       @click="removeCity"
     >
       <i class="fa-solid fa-trash"></i>
