@@ -73,7 +73,7 @@ const previewCity = (result) => {
   router.push({
     name: "cityView",
     params: { country: result.country, city: result.name },
-    query: { lon: result.lon, lat: result.lat, preview: true },
+    query: { lon: result.lon, lat: result.lat, preview: true }
   })
 }
 </script>

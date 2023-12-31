@@ -4,7 +4,7 @@
   </div>
 
   <p v-if="savedCities.length === 0">
-No locations added. To start tracking a location, search in the field above.
+    No locations added. To start tracking a location, search in the field above.
   </p>
 </template>
 
@@ -47,7 +47,7 @@ const goToCityView = (city) => {
   router.push({
     name: "cityView",
     params: { country: city.country, city: city.city },
-    query: { id: city.id, lat: city.coords.lat, lon: city.coords.lon },
+    query: { id: city.id, lat: city.coords.lat, lon: city.coords.lon }
   })
 }
 </script>

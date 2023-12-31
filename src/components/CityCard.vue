@@ -23,7 +23,7 @@
 defineProps({
   city: {
     type: Object,
-    default: () => {},
-  },
+    default: () => {}
+  }
 })
 </script>
