@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen bg-weather-primary">
+  <div class="flex min-h-screen flex-col bg-weather-primary">
     <Navigation />
     <RouterView />
   </div>

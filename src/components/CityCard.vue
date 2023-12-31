@@ -1,14 +1,14 @@
 <template>
   <div
-    class="flex py-6 px-3 bg-weather-secondary rounded-md shadow-md cursor-pointer"
+    class="flex cursor-pointer rounded-md bg-weather-secondary px-3 py-6 shadow-md"
   >
-    <div class="flex flex-col flex-1">
+    <div class="flex flex-1 flex-col">
       <h2 class="text-3xl">{{ city.city }}</h2>
       <h3>{{ city.country }}</h3>
     </div>
 
     <div class="flex flex-col gap-2">
-      <p class="text-3xl self-end">
+      <p class="self-end text-3xl">
         {{ Math.round(city.weather.main.temp) }}&deg;
       </p>
       <div>
